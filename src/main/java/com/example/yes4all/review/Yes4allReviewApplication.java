@@ -163,17 +163,7 @@ public class Yes4allReviewApplication {
 
         @GetMapping("/review")
         public String getReviewData() {
-            try {
-                Path path = Paths.get(FILE_PATH);
-                if (Files.exists(path)) {
-                    return new String(Files.readAllBytes(path));
-                } else {
-                    return "No review data available";
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-                return "Error retrieving review data";
-            }
+           return "Hello";
         }
     }
 }
